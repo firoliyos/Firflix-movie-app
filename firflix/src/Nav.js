@@ -7,11 +7,17 @@ function Nav() {
       if (window.scrollY > 100) {
         handleShow(true)
       } else handleShow(false)
-    })
+    });
+
     return () => { 
-      window.removeEventListener('scroll')
+      window.removeEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+          handleShow(true)
+        } else handleShow(false)
+      })
     }
   }, [])
+
   return (
     <div className={`nav ${show && 'nav_black'}`}>
       <img
