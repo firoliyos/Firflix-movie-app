@@ -8,7 +8,7 @@ function Nav() {
         handleShow(true)
       } else handleShow(false)
     })
-    return () => {
+    return () => { 
       window.removeEventListener('scroll')
     }
   }, [])
