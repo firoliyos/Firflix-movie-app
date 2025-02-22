@@ -10,9 +10,9 @@
     transition: all 0.5s;
     transition-timing-function: ease-in;
 }
-/* .nav_black {
+.nav_black {
     background-color: #111;
-} */
+}
 .nav.logo {
     position: fixed;
     left: 20px;
