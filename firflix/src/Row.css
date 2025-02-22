@@ -16,14 +16,14 @@
     display: none;
 }
 .row_poster:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     opacity: 1;
 }
 .row_posterLarge {
     max-height: 250px;
 }
 .row_posterLarge:hover {
-    transform: scale(1.4);
+    transform: scale(1.2);
     opacity: 1;
 }
 .row {
@@ -32,6 +32,23 @@
 }
 
 /* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .row_posters {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row_poster {
+    max-height: 150px; /* Adjusted size for larger tablets */
+    margin-bottom: 10px;
+  }
+
+  .row_posterLarge {
+    max-height: 220px; /* Adjusted size for larger tablets */
+    margin-bottom: 10px;
+  }
+}
+
 @media (max-width: 768px) {
   .row_posters {
     flex-direction: column;
