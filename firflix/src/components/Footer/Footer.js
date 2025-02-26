@@ -1,59 +1,37 @@
-import React from 'react'
-import './Footer.css'
+import React from 'react';
+import './Footer.css';
 
-import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import YouTubeIcon from '@mui/icons-material/YouTube';
 function Footer() {
   return (
-    <div className='footer_outer_container'>
-      <div className='footer_inner_container'>
-        <div className='footer_icons'>
-          <FacebookOutlinedIcon/>
-          <InstagramIcon/>
-          <YouTubeIcon/>
-        </div>
-        <div className='footer_data'>
-          <div>
-            <ul>
-             <li>Audio Description</li>
-             <li>Investor Relations</li>
-             <li>Legal Notice</li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-             <li>Help Center</li>
-             <li>Jobs</li>
-             <li>Cookie Preference</li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-             <li>Gift Cards</li>
-             <li> Terms of Use</li>
-             <li>Corporate Information</li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-             <li>Media Center</li>
-             <li>Privacy</li>
-             <li>Contact Us</li>
-            </ul>
-          </div>
-        </div>
-        <div className='service_code'>
-          <p>
-            Service Code
-          </p>
-        </div>
-        <div className='copy_right'>
-            © 1997-2025 Firflix, All rights reserved.
-        </div>
-     </div>
+    <div className="footer">
+      <div className="footer_links">
+        <a href="#">FAQ</a>
+        <a href="#">Help Center</a>
+        <a href="#">Account</a>
+        <a href="#">Media Center</a>
+        <a href="#">Investor Relations</a>
+        <a href="#">Jobs</a>
+        <a href="#">Ways to Watch</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy</a>
+        <a href="#">Cookie Preferences</a>
+        <a href="#">Corporate Information</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Speed Test</a>
+        <a href="#">Legal Notices</a>
+        <a href="#">Netflix Originals</a>
+      </div>
+      <div className="footer_social">
+        <a href="#"><i className="fab fa-facebook-f"></i></a>
+        <a href="#"><i className="fab fa-instagram"></i></a>
+        <a href="#"><i className="fab fa-twitter"></i></a>
+        <a href="#"><i className="fab fa-youtube"></i></a>
+      </div>
+      <div className="footer_copyright">
+        <p>&copy; 2025 Firflix, Inc.</p>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
