@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 import NetflixLogo from '../../assets/images/Netflix_logo.png';
 import SearchIcon from '@mui/icons-material/Search';
@@ -6,6 +7,7 @@ import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import DehazeIcon from '@mui/icons-material/Dehaze';
+import CloseIcon from '@mui/icons-material/Close';
 
 function Header() {
   const [show, setShow] = useState(false);
@@ -32,19 +34,20 @@ function Header() {
     <div className={`header_outer_container ${show && 'nav_black'}`}>
       <div className="header_container">
         <div className="header_left">
-          <img
-            className="header_logo"
-            src={NetflixLogo}
-            alt="Netflix Logo"
-            width="100"
-          />
+          <Link to="/">
+            <img
+              className="header_logo"
+              src={NetflixLogo}
+              alt="Netflix Logo"
+              width="100"
+            />
+          </Link>
           <ul className={`header_nav ${menuOpen && 'open'}`}>
-            <li>Home</li>
-            <li>TV Shows</li>
-            <li>Movies</li>
-            <li>Latest</li>
-            <li>My List</li>
-            <li>Browse by Language</li>
+            <li><Link to="/tv-shows">TV Shows</Link></li>
+            <li><Link to="/movies">Movies</Link></li>
+            <li><Link to="/latest">Latest</Link></li>
+            <li><Link to="/my-list">My List</Link></li>
+            <li><Link to="/browse-by-language">Browse by Language</Link></li>
           </ul>
         </div>
         <div className="header_right">
@@ -56,7 +59,7 @@ function Header() {
           </ul>
         </div>
         <div className="header_menu_icon" onClick={toggleMenu}>
-          <DehazeIcon />
+          {menuOpen ? <CloseIcon /> : <DehazeIcon />}
         </div>
       </div>
     </div>
