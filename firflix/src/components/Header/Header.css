@@ -25,7 +25,7 @@
 }
 
 .header_logo {
-    margin-right: 40vh; /* Increased margin for better spacing */
+  margin-right: 40vh;    
   width: 100px;
   object-fit: contain;
   transition: transform 0.3s ease; /* Smooth transition for transform */
@@ -57,6 +57,11 @@
 
 .header_nav li a:hover {
   color: #e50914;
+}
+
+.header_nav li a.active {
+  color: #e50914; /* Highlight the active link */
+  font-weight: bold; /* Make the active link bold */
 }
 
 .header_right ul {

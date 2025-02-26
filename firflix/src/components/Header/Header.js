@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.css';
 import NetflixLogo from '../../assets/images/Netflix_logo.png';
 import SearchIcon from '@mui/icons-material/Search';
@@ -30,24 +30,28 @@ function Header() {
     setMenuOpen(!menuOpen);
   };
 
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <div className={`header_outer_container ${show && 'nav_black'}`}>
       <div className="header_container">
         <div className="header_left">
-          <Link to="/">
+          <NavLink to="/">
             <img
               className="header_logo"
               src={NetflixLogo}
               alt="Netflix Logo"
               width="100"
             />
-          </Link>
+          </NavLink>
           <ul className={`header_nav ${menuOpen && 'open'}`}>
-            <li><Link to="/tv-shows">TV Shows</Link></li>
-            <li><Link to="/movies">Movies</Link></li>
-            <li><Link to="/latest">Latest</Link></li>
-            <li><Link to="/my-list">My List</Link></li>
-            <li><Link to="/browse-by-language">Browse by Language</Link></li>
+            <li><NavLink to="/tv-shows" onClick={handleLinkClick} activeClassName="active">TV Shows</NavLink></li>
+            <li><NavLink to="/movies" onClick={handleLinkClick} activeClassName="active">Movies</NavLink></li>
+            <li><NavLink to="/latest" onClick={handleLinkClick} activeClassName="active">Latest</NavLink></li>
+            <li><NavLink to="/my-list" onClick={handleLinkClick} activeClassName="active">My List</NavLink></li>
+            <li><NavLink to="/browse-by-language" onClick={handleLinkClick} activeClassName="active">Browse by Language</NavLink></li>
           </ul>
         </div>
         <div className="header_right">
