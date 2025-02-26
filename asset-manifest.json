@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/firoliyos.github.io/Firflix-movie-app/static/css/main.0aa87a0e.css",
+    "main.js": "/firoliyos.github.io/Firflix-movie-app/static/js/main.bbe37a90.js",
+    "static/js/453.eeba9f7f.chunk.js": "/firoliyos.github.io/Firflix-movie-app/static/js/453.eeba9f7f.chunk.js",
+    "index.html": "/firoliyos.github.io/Firflix-movie-app/index.html",
+    "main.0aa87a0e.css.map": "/firoliyos.github.io/Firflix-movie-app/static/css/main.0aa87a0e.css.map",
+    "main.bbe37a90.js.map": "/firoliyos.github.io/Firflix-movie-app/static/js/main.bbe37a90.js.map",
+    "453.eeba9f7f.chunk.js.map": "/firoliyos.github.io/Firflix-movie-app/static/js/453.eeba9f7f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0aa87a0e.css",
+    "static/js/main.bbe37a90.js"
+  ]
+}
