@@ -17,7 +17,7 @@ function BrowseByLanguage() {
 
   return (
     <div className="browse-by-language">
-      <h2>Browse by Language</h2>
+      {/* <h2>Browse by Language</h2> */}
       <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} isLargeRow />
     </div>
   );

@@ -17,7 +17,7 @@ function MyList() {
 
   return (
     <div className="my-list">
-      <h2>My List</h2>
+      {/* <h2>My List</h2> */}
       <Row title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals} isLargeRow />
     </div>
   );

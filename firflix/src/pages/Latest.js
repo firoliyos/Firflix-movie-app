@@ -17,7 +17,7 @@ function Latest() {
 
   return (
     <div className="latest">
-      <h2>Latest</h2>
+      {/* <h2>Latest</h2> */}
       <Row title="Trending Now" fetchUrl={requests.fetchTrending} isLargeRow />
     </div>
   );
