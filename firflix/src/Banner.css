@@ -15,6 +15,10 @@
     padding-bottom: 0.3rem;
 }
 
+.banner_buttons {
+    display: flex;
+}
+
 .banner_description {
     width: 45rem;
     line-height: 1.3;

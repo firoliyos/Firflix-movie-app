@@ -1,51 +1,33 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Banner from './Banner';
 import Footer from './components/Footer/Footer';
 import Nav from './Nav';
-import requests from './requests';
-import Row from './Row';
+import Home from './pages/Home';
+import TVShows from './pages/TVShows';
+import Movies from './pages/Movies';
+import Latest from './pages/Latest';
+import MyList from './pages/MyList';
+import BrowseByLanguage from './pages/BrowseByLanguage';
 
 function App() {
   return (
-    <div className="App">
-      <Nav/>
-      <Banner/>
-      <Row 
-        title='Netflix Originals'
-        fetchUrl={requests.fetchNetflixOriginals}
-        isLargeRow
-      />
-      <Row 
-        title='Trending Now'
-        fetchUrl={requests.fetchTrending}
-       />
-       <Row 
-        title='Top Rated'
-        fetchUrl={requests.fetchTopRatedMovies}
-       />
-        <Row 
-          title='Action Movies'
-          fetchUrl={requests.fetchActionMovies}
-        />
-        <Row 
-          title='Comedy Movies'
-          fetchUrl={requests.fetchComedyMovies}
-        />
-        <Row 
-          title='Horror Movies'
-          fetchUrl={requests.fetchHorrorMovies}
-        />
-        <Row 
-          title='Romance Movies'
-          fetchUrl={requests.fetchRomanceMovies}
-        />
-        <Row 
-          title='Documentaries'
-          fetchUrl={requests.fetchDocumentaries}
-        />
-        <Footer/>
-    </div>
-    
+    <Router>
+      <div className="App">
+        <Nav />
+        <Banner />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/tv-shows" element={<TVShows />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/latest" element={<Latest />} />
+          <Route path="/my-list" element={<MyList />} />
+          <Route path="/browse-by-language" element={<BrowseByLanguage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
