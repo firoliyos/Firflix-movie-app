@@ -1,5 +1,6 @@
 import './App.css';
 import Banner from './Banner';
+import Footer from './components/Footer/Footer';
 import Nav from './Nav';
 import requests from './requests';
 import Row from './Row';
@@ -42,7 +43,9 @@ function App() {
           title='Documentaries'
           fetchUrl={requests.fetchDocumentaries}
         />
+        <Footer/>
     </div>
+    
   );
 }
 

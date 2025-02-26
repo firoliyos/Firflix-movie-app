@@ -1,0 +1,106 @@
+.header_outer_container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 20, 20);
+  height: 10vh;
+  color: white;
+  transition: all 0.5s;
+  transition-timing-function: ease-in;
+  z-index: 1;
+}
+
+.header_container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_left {
+  display: flex;
+  align-items: center;
+}
+
+.header_logo {
+  width: 100px;
+  object-fit: contain;
+  transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+.header_logo:hover {
+  transform: scale(1.1); /* Scale up the logo on hover */
+}
+
+.header_nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header_nav li {
+  margin-right: 30px; /* Increased margin for more spacing */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.header_nav li:hover {
+  color: #e50914; /* Change color on hover */
+}
+
+.header_right ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header_right ul li {
+  margin-left: 20px;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.header_right ul li:hover {
+  color: #e50914; /* Change color on hover */
+}
+
+.header_menu_icon {
+  display: none;
+  cursor: pointer;
+}
+
+.nav_black {
+  background-color: rgb(20, 20, 20);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .header_nav {
+    display: none;
+  }
+
+  .header_nav.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    padding: 20px;
+  }
+
+  .header_nav li {
+    margin: 10px 0;
+  }
+
+  .header_menu_icon {
+    display: block;
+  }
+}

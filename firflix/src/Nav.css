@@ -13,19 +13,8 @@
 .nav_black {
     background-color: #111;
 }
-.nav.logo {
-    position: fixed;
-    left: 20px;
-    width: 80px;
-    object-fit: contain;
-}
-.nav_avatar {
-    position: fixed;
-    right: 20px;
-    width: 30px;
-    object-fit: contain;
-}
 
+/* 
 @media (max-width: 768px) {
     .nav {
       padding: 10px;
@@ -47,11 +36,5 @@
       height: 40px;
     }
   
-    .nav_logo {
-      width: 50px;
-    }
   
-    .nav_avatar {
-      width: 20px;
-    }
-  }
+  } */
